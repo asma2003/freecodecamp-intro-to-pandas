@@ -1,5 +1,7 @@
-Code used in this Python Code Clip:
+#Code used :
 
+
+```python
 import pandas as pd 
 
 data = pd.DataFrame({"power_level": [12000, 16000, 4000, 1500, 3000, 
@@ -13,18 +15,18 @@ data = pd.DataFrame({"power_level": [12000, 16000, 4000, 1500, 3000,
 
 data
 
-## Use .apply() to apply a function to a Series (single column)
+# Use .apply() to apply a function to a Series (single column)
 
-```python
+
 def my_function(x, h, l):
     if x ＞  h:
         return("high")
     if x ＞  l:
         return("med")
     return ("low")
-```
 
 data["power_level"].apply(my_function, args = [10000, 2000])
+```
 
 # Apply a function to each column with axis = 0
 # Can be used to create new rows/summary rows
